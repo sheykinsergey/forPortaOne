@@ -34,14 +34,14 @@ def mediana(arr):
     else:
         return (arr[idx] + arr[idx - 1]) / 2
 
-def max_sequence(arr):
+def max_sequence(data):
     arr = [[data[0]]]
     for i in range(1, len(data)):
         if data[i - 1] >= data[i]:arr.append([])
         arr[-1].append(data[i])
     return (max(arr, key = len))
 
-def min_sequence(arr):
+def min_sequence(data):
     arr = [[data[0]]]
     for i in range(1, len(data)):
         if data[i - 1] <= data[i]:arr.append([]) 
